@@ -24,7 +24,7 @@ This project involved the following key steps:
 
 This project was chosen because it combines two highly relevant datasets—weather and population—which are critical for urban planning and climate change research. By understanding the relationship between weather patterns and population growth, the project can provide valuable insights into how climate variables affect urbanization, infrastructure, and public policy. It is an important step towards informed decision-making in areas such as disaster management, urban expansion, and migration patterns.
 
-=The methodology followed in this project can be summarized in the following steps:
+The methodology followed in this project can be summarized in the following steps:
 
 1. Data Collection: Acquiring datasets from Kaggle related to Australian weather and city populations.
 2. Pre-processing: Cleaning, imputing missing values, removing irrelevant columns, and handling outliers.
