@@ -1,37 +1,89 @@
 # Climate-Driven-Urban-Growth-Analysis-Using-R
 
-Objective
-The objective of this project was to analyze weather patterns and their impact on population growth across Australian cities. By merging weather data (meteorological observations) with city population data from 2011 and 2017, the goal was to uncover potential correlations between extreme weather events and urban growth trends. This analysis could provide insights into how weather influences migration, infrastructure development, and urban planning.
+---
 
-Tools & Techniques Used
-The primary tools and techniques used in this project included:
+## 🎯 Objective
 
-1. RStudio: For data pre-processing, manipulation, and analysis.
-2. R Packages: readxl, dplyr, tidyr for data manipulation, and ggplot2 for data visualization.
-3. Data Transformation: Pivoting data using pivot_longer() for tidying the datasets and ensuring they adhere to tidy data principles.
-4. Data Imputation and Outlier Handling: Median imputation for missing values and Winsorization for outlier treatment.
-5. Type Conversion: Converting columns into appropriate data types (numeric, factor).
-6. Merging Datasets: Combining weather and population datasets based on common attributes like Location and Year.
+To investigate whether climatic variables such as rainfall, temperature, and humidity have influenced population growth across Australian cities between 2011 and 2017.
 
-This project involved the following key steps:
+---
 
-1. Data Collection and Import: Weather and city population datasets were sourced from Kaggle and imported into RStudio.
-2. Data Cleaning: Non-relevant columns were removed, and the Date column was converted to a usable date format. Missing values were imputed, and outliers were handled using Winsorization.
-3. Tidying and Reshaping: The weather dataset was pivoted to transform multiple columns into a unified structure for easier analysis. The city population dataset was reshaped to merge both years (2011 and 2017) into a single column.
-4. Merging Datasets: Both datasets were merged by common variables such as Location and Year.
-5. Data Type Conversion: Columns were converted to appropriate data types (e.g., numeric for continuous variables and factor for categorical ones).
-6. Analysis and Exploration: Initial explorations and visualizations were performed to understand trends and relationships.
+## 🧰 Tools & Technologies
 
-This project was chosen because it combines two highly relevant datasets—weather and population—which are critical for urban planning and climate change research. By understanding the relationship between weather patterns and population growth, the project can provide valuable insights into how climate variables affect urbanization, infrastructure, and public policy. It is an important step towards informed decision-making in areas such as disaster management, urban expansion, and migration patterns.
+| Tool | Purpose |
+|------|---------|
+| **RStudio** | Data analysis and visualization |
+| **R Packages** | `readxl`, `dplyr`, `tidyr`, `ggplot2` |
+| **Data Wrangling Techniques** | `pivot_longer()`, merging, type conversion |
+| **Imputation** | Median imputation for missing values |
+| **Outlier Handling** | Winsorization |
+| **Visualization** | Correlation plots, trend graphs using `ggplot2` |
 
-The methodology followed in this project can be summarized in the following steps:
+---
 
-1. Data Collection: Acquiring datasets from Kaggle related to Australian weather and city populations.
-2. Pre-processing: Cleaning, imputing missing values, removing irrelevant columns, and handling outliers.
-3. Tidying Data: Reshaping datasets to adhere to tidy data principles using the pivot_longer() function.
-4. Merging Data: Combining the weather and population data based on common attributes.
-5. Type Conversion: Converting data columns into the appropriate types for analysis (e.g., numeric, factor).\
-6. Exploratory Analysis: Initial data exploration to identify trends, correlations, and patterns between weather data and population growth.
-7. Statistical Analysis: Conducting further analysis to draw insights and conclusions from the data.
+## 🗂️ Project Workflow
 
-In conclusion, this project effectively combined weather and population data to provide a deeper understanding of how weather patterns might influence population growth in Australian cities. By applying data cleaning, transformation, and analysis techniques, it was possible to uncover meaningful insights that can be used to inform urban planning and public policy. The project highlights the importance of merging different data sources and ensuring that data is tidied and structured correctly for meaningful analysis. The findings may be particularly useful for future studies on climate change, urbanization, and migration patterns.
+### 1. 📥 Data Collection
+- Meteorological and population data sourced from **Kaggle**.
+- Weather data includes daily records of Australian cities.
+- Population data covers census values for **2011 and 2017**.
+
+### 2. 🧹 Data Preprocessing
+- Removed irrelevant columns.
+- Parsed and formatted the `Date` column.
+- Missing values imputed using **median imputation**.
+- Outliers handled using **Winsorization** to retain variability without distortion.
+
+### 3. 📊 Data Transformation
+- Used `pivot_longer()` to tidy the weather dataset.
+- Merged 2011 and 2017 population columns into a single `Year` column for tidy structure.
+
+### 4. 🔗 Merging Datasets
+- Combined weather and population datasets based on `Location` and `Year`.
+
+### 5. 🔄 Type Conversion
+- Ensured proper data types:  
+  - `numeric` for continuous values (e.g., rainfall, temperature).  
+  - `factor` for categorical attributes (e.g., city names).
+
+### 6. 🔎 Exploratory Data Analysis
+- Created **time-series plots**, **correlation matrices**, and **scatterplots**.
+- Observed population trends with respect to weather metrics across cities.
+
+### 7. 📈 Statistical Insights
+- Investigated the effect of **extreme weather patterns** on **urban growth**.
+- Analyzed how **climatic anomalies** may correlate with **population shifts** or **growth stagnation**.
+
+---
+
+## 📌 Key Insights
+
+- Preliminary results indicate a potential **correlation between extreme climate events** (e.g., high rainfall or heatwaves) and **migration or slowed growth** in certain regions.
+- These insights can assist in:
+  - **Urban planning**
+  - **Disaster preparedness**
+  - **Infrastructure investment**
+  - **Climate change adaptation policies**
+
+---
+
+## 📚 Learning Outcomes
+
+- Mastered data wrangling with `dplyr`, `tidyr`, and reshaping using `pivot_longer()`.
+- Gained hands-on experience in handling **real-world data challenges** like missing values and outliers.
+- Developed a structured approach to **merging multi-source datasets**.
+- Drew meaningful **policy-relevant conclusions** from integrated datasets.
+
+---
+
+## 📖 References
+
+- Australian Bureau of Meteorology (via Kaggle)
+- Australian Bureau of Statistics
+- R documentation for `tidyr`, `ggplot2`, and `dplyr`
+
+---
+
+## 📝 License
+
+This project is for academic and non-commercial use only.
