@@ -1,89 +1,62 @@
-# Climate-Driven-Urban-Growth-Analysis-Using-R
+# Climate-Driven Urban Growth Analysis Using R
+**Investigating relationships between climate variables and Australian urban population changes (2011-2017)**
 
----
+## 🎯 Research Question
+Does climate (rainfall, temperature, humidity) influence population growth patterns across Australian cities between 2011 and 2017?
 
-## 🎯 Objective
+## 📊 Data Integration
+**Meteorological Data:**
+- Daily weather records for Australian cities
+- Variables: rainfall, temperature, humidity measurements
+- Source: Australian weather data via Kaggle
 
-To investigate whether climatic variables such as rainfall, temperature, and humidity have influenced population growth across Australian cities between 2011 and 2017.
+**Population Data:**
+- Census data for 2011 and 2017
+- City-level population figures
+- Growth calculation between census periods
 
----
+## 🔬 Methodology
+**Data Preparation:**
+- Missing value treatment using median imputation
+- Outlier handling through Winsorization technique
+- Data type standardization and format consistency
 
-## 🧰 Tools & Technologies
+**Integration Process:**
+- Temporal alignment of weather and population datasets
+- Geographic matching of cities across both datasets
+- Tidy data structure creation using pivot_longer()
 
-| Tool | Purpose |
-|------|---------|
-| **RStudio** | Data analysis and visualization |
-| **R Packages** | `readxl`, `dplyr`, `tidyr`, `ggplot2` |
-| **Data Wrangling Techniques** | `pivot_longer()`, merging, type conversion |
-| **Imputation** | Median imputation for missing values |
-| **Outlier Handling** | Winsorization |
-| **Visualization** | Correlation plots, trend graphs using `ggplot2` |
+**Statistical Analysis:**
+- Correlation analysis between climate variables and population change
+- Time-series exploration of weather patterns
+- Population growth trend analysis by city
 
----
+## 🛠️ Technical Implementation
+**Language:** R  
+**Data Wrangling:** dplyr, tidyr with pivot_longer() for data restructuring  
+**Visualization:** ggplot2 for statistical charts and correlation plots  
+**Analysis:** Statistical correlation and trend analysis techniques
 
-## 🗂️ Project Workflow
+## 📈 Analytical Outputs
+- **Correlation Matrices:** Climate vs population growth relationships
+- **Time-Series Plots:** Weather pattern visualization over study period  
+- **Scatterplot Analysis:** Population change vs climate variable relationships
+- **Trend Visualization:** Urban growth patterns with climate overlay
 
-### 1. 📥 Data Collection
-- Meteorological and population data sourced from **Kaggle**.
-- Weather data includes daily records of Australian cities.
-- Population data covers census values for **2011 and 2017**.
+## 🌏 Australian Context
+- **Geographic Scope:** Major Australian cities with available climate and population data
+- **Temporal Range:** 2011-2017 for consistent census comparison
+- **Climate Focus:** Key variables relevant to livability and urban planning
 
-### 2. 🧹 Data Preprocessing
-- Removed irrelevant columns.
-- Parsed and formatted the `Date` column.
-- Missing values imputed using **median imputation**.
-- Outliers handled using **Winsorization** to retain variability without distortion.
+## 🎓 Research Value
+- **Urban Planning:** Understanding climate influence on city growth
+- **Policy Insights:** Data-driven approach to climate-population relationships
+- **Methodology:** Reproducible framework for similar analyses
+- **R Skills:** Advanced data manipulation and statistical visualization techniques
 
-### 3. 📊 Data Transformation
-- Used `pivot_longer()` to tidy the weather dataset.
-- Merged 2011 and 2017 population columns into a single `Year` column for tidy structure.
-
-### 4. 🔗 Merging Datasets
-- Combined weather and population datasets based on `Location` and `Year`.
-
-### 5. 🔄 Type Conversion
-- Ensured proper data types:  
-  - `numeric` for continuous values (e.g., rainfall, temperature).  
-  - `factor` for categorical attributes (e.g., city names).
-
-### 6. 🔎 Exploratory Data Analysis
-- Created **time-series plots**, **correlation matrices**, and **scatterplots**.
-- Observed population trends with respect to weather metrics across cities.
-
-### 7. 📈 Statistical Insights
-- Investigated the effect of **extreme weather patterns** on **urban growth**.
-- Analyzed how **climatic anomalies** may correlate with **population shifts** or **growth stagnation**.
-
----
-
-## 📌 Key Insights
-
-- Preliminary results indicate a potential **correlation between extreme climate events** (e.g., high rainfall or heatwaves) and **migration or slowed growth** in certain regions.
-- These insights can assist in:
-  - **Urban planning**
-  - **Disaster preparedness**
-  - **Infrastructure investment**
-  - **Climate change adaptation policies**
-
----
-
-## 📚 Learning Outcomes
-
-- Mastered data wrangling with `dplyr`, `tidyr`, and reshaping using `pivot_longer()`.
-- Gained hands-on experience in handling **real-world data challenges** like missing values and outliers.
-- Developed a structured approach to **merging multi-source datasets**.
-- Drew meaningful **policy-relevant conclusions** from integrated datasets.
-
----
-
-## 📖 References
-
-- Australian Bureau of Meteorology (via Kaggle)
-- Australian Bureau of Statistics
-- R documentation for `tidyr`, `ggplot2`, and `dplyr`
-
----
-
-## 📝 License
-
-This project is for academic and non-commercial use only.
+## 📁 Technical Skills Showcased
+- Multi-source dataset integration
+- Advanced R data wrangling (pivot_longer, joins)
+- Statistical correlation analysis
+- Climate data processing and visualization
+- Population trend analysis techniques
